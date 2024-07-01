@@ -21,12 +21,15 @@ python3.6+
   
 ```pip install pycryptodome```
 
-- openpyxl
 - argparse
+
+```pip install openpyxl```
+- openpyxl
+
 
 # Совместимость
 
-Скрипт проверен на ресурсах KUMA 2.1.1.73 и KUMA 3.2.0.305
+Скрипт проверен на ресурсах KUMA 2.1.1.73, KUMA 3.0.3.19 и KUMA 3.2.0.305
 
 # Описание работы
 
@@ -50,6 +53,19 @@ options:
 ```
 
 # Известные ограничения
+
+Если возникает ошибка:
+```
+AttributeError: module 'bson' has no attribute 'BSON'
+```
+Необходимо выполнить следующие действия:
+
+```
+pip uninstall bson
+pip uninstall pymongo
+pip install pymongo
+```
+#
 
 Для некоторых версий Excel при открытии файла .xlsx, сгенерированного данным скриптом может возникать ошибка
 
