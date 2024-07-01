@@ -34,7 +34,7 @@ python3.6+
 
 # Установка
 
-```git clone https://github.com/koalapower/mapping_extractor```
+```git clone https://github.com/KUMA-Community/mapping_extractor```
 
 Либо просто скачайте файлы `mapping_extractor.py` и `kuma_package.py`.
 
