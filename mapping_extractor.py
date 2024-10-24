@@ -235,6 +235,11 @@ if __name__ == '__main__':
             sheet_style(sheet)
             insert_normalizer(prepared_normalizer, sheet, dictionaries)
 
-            wb.save('_' + resource['name'] + '.xlsx')
+            forbidden_chars = ['\\', '/', ':', '*', '?', '"', '<', '>', '|']
+            name_to_save = resource['name']
+            for ch in forbidden_chars:
+                name_to_save = name_to_save.replace(ch, ' ')
+
+            wb.save('_' + name_to_save + '.xlsx')
 
     os.remove('resources.json.temp')
